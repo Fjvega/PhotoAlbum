@@ -1,5 +1,5 @@
 # PhotoAlbum
-This is my Technical Test for Dexfreight , I choose the Gallery Test
+This is my Technichal  Test for dexFreight , I choose the Gallery Test
 
 ### Documentation
 ```
