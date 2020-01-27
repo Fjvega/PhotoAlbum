@@ -1,6 +1,9 @@
 # PhotoAlbum
 This is my Technichal  Test for dexFreight , I choose the Gallery Test
 
+
+The Deploy is in Google Cloud using Docker, because Docker create a temporary folder to run the container the files are not persistent in this deploy, but the operations in the Db are because is online
+
 ### Documentation
 ```
 https://docs.google.com/document/d/1ht10cwKZxA5Te4QeSyec4D31n4o0P2lNG5sCp2We5aM/edit?usp=sharing
