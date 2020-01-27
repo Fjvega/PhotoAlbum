@@ -1,0 +1,146 @@
+.second_container{
+    min-height: 110vh;
+    height: 110vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+
+
+}
+
+.second_container img{
+
+    width: 10%;
+}
+
+
+.second_container h1{
+    font-family: roboto-Regular;
+    font-size: 4vw;
+    letter-spacing: 1px;
+    margin-top: 0%;
+
+}
+
+.second_container h1 span{
+    color: #c91322;
+}
+
+.card_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+ .card{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.column1 {
+  
+    background-color: #cd2836;
+    width: 70%;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  }
+
+.column2 {
+    background-color: #c91322;
+    width: 70%;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+}
+
+.column3 {
+    background-color: #b7121f;
+    width: 70%;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  
+}
+
+.logo_card{
+    width: 30% !important
+}
+
+
+
+/*FLIP CARD*/
+.flip-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.flip-back{
+
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+}
+
+.flip-front h3{
+margin-top: 5%;
+font-family: roboto-Bold !important;
+color: white !important;
+font-size: 150%;
+
+}
+
+.flip-back h3{
+
+font-family: roboto-Regular !important;
+color: white !important ;
+font-size: 100%;
+
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.column1:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.column2:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.column3:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+

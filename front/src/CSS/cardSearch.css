@@ -1,0 +1,78 @@
+.card_search{
+    height: 420px;
+    width: 35vw ;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(172,163,154,1);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(172,163,154,1);
+     box-shadow: 0px 0px 15px -1px rgba(172,163,154,1);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 5%;
+}
+
+.card_search h2{
+   color: #c91322;
+   font-family: roboto-Bold;
+}
+.tittle_container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.tittle_container h3{
+    
+    font-family: roboto-Bold;
+    padding-left: 10px;
+}
+
+.date_container{
+    width: 80%;
+    margin-left: 20%;
+}
+.date_container input[type="date"]{
+    margin-bottom: 1%;
+    height: 50px !important;
+    padding: 0px !important;
+    margin-left: 5%;
+    display: inline-block !important;
+}
+.card_search input[type="text"], .date_container input[type="date"] {
+
+    display: block;
+    box-sizing: border-box;
+    padding: 4px;
+    width: 220px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    font-family: roboto-Regular;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+  
+  .card_search input[type="text"]:focus, .date_container input[type="date"]:focus {
+    outline: none;
+    border-bottom: 2px solid #c91322;
+    color: black;
+    transition: 0.2s ease;
+  }
+
+  .card_search input[type="submit"] {
+    width: 120px;
+    height: 32px;
+    background: #c91322;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: roboto-Bold;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 2%;
+
+  }
