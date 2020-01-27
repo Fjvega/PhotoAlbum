@@ -1,0 +1,53 @@
+version : '3.1'
+
+services:
+    web:
+        build:
+            context: ./web
+            dockerfile: DockerFile
+        ports:
+        - "3000:3000"
+        networks:
+            testing_net:
+                ipv4_address: 172.28.1.1
+    api:
+        build: ./api
+        ports:
+        - "5000:5000"
+        networks:
+            testing_net:
+                ipv4_address: 172.28.1.2
+        links:
+        - "db:db"
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        ports:
+        - "3306:3306"
+        restart: always
+        volumes:
+            - ./mysql-dump:/docker-entrypoint-initdb.d
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: test
+        networks:
+            testing_net:
+                ipv4_address: 172.28.1.3 
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+        - "8080:80"
+        networks:
+            testing_net:
+                ipv4_address: 172.28.1.4
+        links:
+        - "db:db"
+        
+
+
+networks:
+    testing_net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.28.0.0/16

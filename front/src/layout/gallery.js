@@ -531,7 +531,7 @@ class Gallery extends Component {
               send={this.getSearch}
             />
             <label for="file-upload">Upload Image</label>
-            <input id="file-upload" type="file" onChange={this.addFile} />
+            <input id="file-upload" type="file" onChange={this.addFile} accept="image/*" />
             <div className="album_container">
               <input type="text" name="newAlbum" placeholder="Album Name" value={this.state.newAlbum} onChange={this.handleChange}/>
               <input type="submit" name="upload_new" value="Create new Album" onClick={this.createNewAlbum} />
